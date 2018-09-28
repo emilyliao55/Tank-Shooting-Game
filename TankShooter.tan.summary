@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : 2.553 ns
+Required Time  : 10.000 ns
+Actual Time    : 7.447 ns
+From           : SW[16]
+To             : game_state_t2p:gs|altsyncram:altsyncram_component|altsyncram_mu82:auto_generated|ram_block1a9~porta_we_reg
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.379 ns
+From           : decimal_counter:dc|decimal_unit:du0|value[0]
+To             : HEX0[0]
+From Clock     : CLOCK_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.596 ns
+From           : SW[17]
+To             : decimal_counter:dc|decimal_unit:du0|value[2]
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK_50'
+Slack          : 6.463 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 73.87 MHz ( period = 13.537 ns )
+From           : missiles:ms|altsyncram:altsyncram_component|altsyncram_loc1:auto_generated|ram_block1a2~porta_address_reg8
+To             : game_state_t2p:gs|altsyncram:altsyncram_component|altsyncram_mu82:auto_generated|ram_block1a3~porta_we_reg
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0'
+Slack          : 31.995 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 124.92 MHz ( period = 8.005 ns )
+From           : vga_adapter:VGA|vga_controller:controller|yCounter[4]
+To             : vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_krf1:auto_generated|altsyncram_klq1:altsyncram1|ram_block2a9~porta_address_reg11
+From Clock     : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
+To Clock       : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCK_50'
+Slack          : -0.354 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : state.DEFEAT
+To             : decimal_counter:dc|decimal_unit:du0|value[2]
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 4
+
+Type           : Clock Hold: 'vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0'
+Slack          : 0.515 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_krf1:auto_generated|altsyncram_klq1:altsyncram1|address_reg_a[2]
+To             : vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_krf1:auto_generated|altsyncram_klq1:altsyncram1|out_address_reg_a[2]
+From Clock     : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
+To Clock       : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 4
+
+--------------------------------------------------------------------------------------
+

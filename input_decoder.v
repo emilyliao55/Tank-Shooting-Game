@@ -1,0 +1,94 @@
+module input_decoder(
+	inout			PS2_CLK,
+	inout			PS2_DAT,
+	output reg		up,
+	output reg  	down,
+	output reg		left,
+	output reg		right,
+	output reg		fire,
+	output reg		up2,
+	output reg  	down2,
+	output reg		left2,
+	output reg		right2,
+	output reg		fire2,
+	input			reset,
+	input			CLOCK_50
+);
+
+	wire [7:0] ps2_command;
+	wire ps2_send;
+	wire ps2_send_done;
+	wire ps2_send_error;
+	wire [7:0] ps2_data;
+	wire ps2_data_valid;
+
+	PS2_Controller ps2c(
+		.CLOCK_50(CLOCK_50),
+		.reset(reset),
+		.the_command(ps2_command),
+		.send_command(ps2_send),
+		.PS2_CLK(PS2_CLK),
+		.PS2_DAT(PS2_DAT),
+		.command_was_sent(ps2_send_done),
+		.error_communication_timed_out(ps2_send_error),
+		.received_data(ps2_data),
+		.received_data_en(ps2_data_valid)
+	);
+	
+	always @ (posedge CLOCK_50)
+	begin
+		if (reset) begin
+			up <= 1'b0;
+			down <= 1'b0;
+			left <= 1'b0;
+			right <= 1'b0;
+			fire <= 1'b0;
+			up2 <= 1'b0;
+			down2 <= 1'b0;
+			left2 <= 1'b0;
+			right2 <= 1'b0;
+			fire2 <= 1'b0;
+		end
+		else begin
+		// Note: keys on the keyboard with the same code can act as left, right, etc.
+		// eg. the 8 key on the right side of a PS2 Keyboard can also be used for up since its code is h75
+			if (ps2_data_valid) begin
+				case (ps2_data)
+					// player 1
+					8'h1d: begin // W code = 1d
+						up <= 1'b1;
+					end
+					8'h1b: begin // S code = 1b
+						down <= 1'b1;
+					end
+					8'h1c: begin // A code = 1c
+						left <= 1'b1;
+					end
+					8'h23: begin // D code = 23
+						right <= 1'b1;
+					end
+					8'h29: begin // SPACEBAR code = h29
+						fire <= 1'b1;
+					end
+					// player 2
+					8'h75: begin // UP code = h75
+						up2 <= 1'b1;
+					end
+					8'h72: begin // DOWN code = h72
+						down2 <= 1'b1;
+					end
+					8'h6b: begin //LEFT code = h6b
+						left2 <= 1'b1;
+					end
+					8'h74: begin // RIGHT code = h74
+						right2 <= 1'b1;
+					end
+					8'h5a: begin // ENTER code = 5a
+						fire2 <= 1'b1;
+					end
+				endcase
+			end
+		end
+	end
+
+endmodule

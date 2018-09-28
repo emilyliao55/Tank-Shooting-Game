@@ -1,0 +1,84 @@
+MIF/HEX Update report for TankShooter
+Mon Apr 02 21:30:46 2018
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Mon Apr 02 21:30:46 2018 ;
+; Revision Name         ; TankShooter                           ;
+; Top-level Entity Name ; TankShooter                           ;
+; Family                ; Cyclone II                            ;
+; Device                ; EP2C35F672C6                          ;
++-----------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                          ;
++-------------------------------------------------------------------------+
+; File Name                                                               ;
++-------------------------------------------------------------------------+
+; C:/Users/brent/Documents/CSCB58/FinalProject/TankShooterNew/black.mif   ;
+; C:/Users/brent/Documents/CSCB58/FinalProject/TankShooterNew/initial.mif ;
++-------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit MIF/HEX Update
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Mon Apr 02 21:30:45 2018
+Info: Command: quartus_cdb TankShooter -c TankShooter --update_mif
+Warning (113031): 8720 out of 32768 addresses are reinitialized. The latest initialized data will replace the existing data. There are 8720 warnings found, and 10 warnings are reported.
+    Warning (113030): Memory Initialization File address 24576 is reinitialized
+    Warning (113030): Memory Initialization File address 16386 is reinitialized
+    Warning (113030): Memory Initialization File address 16387 is reinitialized
+    Warning (113030): Memory Initialization File address 16388 is reinitialized
+    Warning (113030): Memory Initialization File address 16389 is reinitialized
+    Warning (113030): Memory Initialization File address 16390 is reinitialized
+    Warning (113030): Memory Initialization File address 16391 is reinitialized
+    Warning (113030): Memory Initialization File address 8 is reinitialized
+    Warning (113030): Memory Initialization File address 9 is reinitialized
+    Warning (113030): Memory Initialization File address 12 is reinitialized
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File C:/Users/brent/Documents/CSCB58/FinalProject/TankShooterNew/black.mif
+    Info (39025): Processed Memory Initialization File C:/Users/brent/Documents/CSCB58/FinalProject/TankShooterNew/initial.mif
+Info: Quartus II 64-Bit MIF/HEX Update was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 530 megabytes
+    Info: Processing ended: Mon Apr 02 21:30:46 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

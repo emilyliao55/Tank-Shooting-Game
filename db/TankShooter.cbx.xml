@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="TankShooter">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TankShooter|vga_adapter:VGA|altsyncram:VideoMemory" CBX_FILE_NAME="altsyncram_krf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TankShooter|game_initial:gi|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_b281.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TankShooter|game_state_t2p:gs|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mu82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TankShooter|missiles:ms2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_loc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TankShooter|missiles:ms|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_loc1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
